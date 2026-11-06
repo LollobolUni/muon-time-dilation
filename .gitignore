@@ -1,0 +1,8 @@
+build/
+__pycache__/
+*.pyc
+firmware/tools/timer-tests/
+*-backups/
+*.lck
+fp-info-cache
+*.kicad_prl

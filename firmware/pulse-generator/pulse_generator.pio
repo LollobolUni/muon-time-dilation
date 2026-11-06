@@ -1,0 +1,25 @@
+; Pulse generator for testing the timer.
+; Each word in the TX FIFO is a delay d in cycles. Two rising edges are exactly d + 26 cycles apart:
+; 1 (pull) + 1 (mov) + d + 1 (wait) + 22 (high) + 1 (low). Pulses are 22 cycles high (146.7 ns at
+; 150 MHz), on two pins at once (GP2 and GP3), to test the alignment between channels as well.
+
+.program pulse_generator
+.wrap_target
+    pull block
+    mov x, osr
+delay:
+    jmp x-- delay
+    set pins, 3 [21]
+    set pins, 0
+.wrap
+
+% c-sdk {
+#define PULSE_GENERATOR_FIXED_CYCLES 26
+static inline pio_sm_config pulse_generator_program_config(uint offset, uint pin) {
+    pio_sm_config c = pulse_generator_program_get_default_config(offset);
+    sm_config_set_set_pins(&c, pin, 2);
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_TX);
+    sm_config_set_clkdiv_int_frac(&c, 1, 0);
+    return c;
+}
+%}

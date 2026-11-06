@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "muon_parts")(type "KiCad")(uri "${KIPRJMOD}/../PCB-401_front-end_channel_board/muon_parts.pretty")(options "")(descr "Project footprints (shared with PCB-401)"))
+)

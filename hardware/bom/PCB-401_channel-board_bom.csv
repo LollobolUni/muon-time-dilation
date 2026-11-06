@@ -1,0 +1,23 @@
+References,Qty,Value,Footprint,Manufacturer,MPN,LCSC,Note,Description
+C1,1,1u 50V,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,YAGEO,CC0805KKX7R9BB105,C91185,,Unpolarized capacitor
+C2,1,100n 50V,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,Samsung,CL21B104KBCNNNC,C1711,,Unpolarized capacitor
+C3,1,10n 50V,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,YAGEO,CC0805KRX7R9BB103,C83170,,Unpolarized capacitor
+C4,1,100p C0G,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,Samsung,CL21C101JBANNNC,C1790,"starting value, tune at bring-up",Unpolarized capacitor
+"C5, C6",2,1u,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,YAGEO,CC0805KKX7R9BB105,C91185,,Unpolarized capacitor
+"C7, C11",2,4u7,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,Samsung,CL21A475KAQNNNE,C1779,,Unpolarized capacitor
+"C8, C9, C10",3,100n,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,Samsung,CL21B104KBCNNNC,C1711,,Unpolarized capacitor
+D1,1,BAT54S,SOT-23,Nexperia,"BAT54S,215",C47546,,"Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+J1,1,JST PH 1x06,JST_PH_S6B-PH-SM4-TB_1x06-1MP_P2.00mm_Horizontal,JST,S6B-PH-SM4-TB(LF)(SN),C265405,,"Generic connectable mounting pin connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+R1,1,4k7,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-074K7L,C60816,,Resistor
+R2,1,49R9,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-0749R9L,C132320,"starting value, tune at bring-up",Resistor
+R3,1,2k7,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-072K7L,C114520,"pole-zero, tune 2k2-3k3 at bring-up",Resistor
+R4,1,330R,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-07330RL,C105878,,Resistor
+"R5, R12",2,10k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-0710KL,C84376,,Resistor
+R6,1,1k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-071KL,C95781,,Resistor
+R7,1,2k2,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-072K2L,C114561,,Resistor
+"R8, R10, R13",3,100R,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-07100RL,C105577,,Resistor
+R9,1,10R,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-0710RL,C96347,,Resistor
+R11,1,330k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-07330KL,C114528,,Resistor
+U1,1,MICROFC-60035-SMT,MICROFC-60035-SMT,onsemi,MICROFC-60035-SMT-TR,,"SiPM, Mouser 863-MFC60035SMTTR (not the TR1 variant)","onsemi C-Series SiPM, 6 mm, 35 um microcells, SMT. Pin 5 (paddle) not soldered"
+U2,1,OPA356AIDBV,SOT-23-5,Texas Instruments,OPA356AIDBVR,C183100,,"Single High Speed CMOS Operational Amplifier, SOT-23-5"
+U3,1,TLV3501AIDBV,SOT-23-6,Texas Instruments,TLV3501AIDBVR,C193413,,"High-Speed Comparator, 4.5-ns, Rail-to-Rail, Push-Pull CMOS Output, SOT-23-6"

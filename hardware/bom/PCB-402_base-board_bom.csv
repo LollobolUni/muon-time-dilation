@@ -1,0 +1,33 @@
+References,Qty,Value,Footprint,Manufacturer,MPN,LCSC,Note,Description
+C1,1,10u,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,TDK,C2012X5R1E106KT000N,C329933,,Unpolarized capacitor
+"C2, C8, C19",3,100n,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,Samsung,CL21B104KBCNNNC,C1711,,Unpolarized capacitor
+"C3, C9, C10, C11, C12, C13",6,1u,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,YAGEO,CC0805KKX7R9BB105,C91185,,Unpolarized capacitor
+"C4, C5, C18",3,4u7,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,Samsung,CL21A475KAQNNNE,C1779,,Unpolarized capacitor
+"C6, C7",2,1u 50V,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,YAGEO,CC0805KKX7R9BB105,C91185,,Unpolarized capacitor
+"C14, C15, C16, C17",4,100n 50V,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,Samsung,CL21B104KBCNNNC,C1711,,Unpolarized capacitor
+D1,1,MBR0540,D_SOD-123,onsemi,MBR0540T1G,C21353,,"Schottky diode, pin 1 = cathode"
+FB1,1,600R@100MHz,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,Murata,BLM21PG331SN1D,C74764,BLM21PG331 (330 R at 100 MHz) used: the 600 R BLM21PG601SN1D is the original choice,Ferrite bead
+J1,1,JST PH CH1,JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical,JST,B6B-PH-K-S(LF)(SN),C131342,,"Generic connector, single row, 01x06"
+J2,1,JST PH CH2,JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical,JST,B6B-PH-K-S(LF)(SN),C131342,,"Generic connector, single row, 01x06"
+J3,1,JST PH CH3,JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical,JST,B6B-PH-K-S(LF)(SN),C131342,,"Generic connector, single row, 01x06"
+J4,1,JST PH CH4,JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical,JST,B6B-PH-K-S(LF)(SN),C131342,,"Generic connector, single row, 01x06"
+J5,1,I2C BMP280,PinHeader_1x04_P2.54mm_Vertical,BOOMELE,2.54-1*40P,C2337,cut from one 1x40 header strip,"Generic connector, single row, 01x04"
+J6,1,SPI microSD,PinHeader_1x06_P2.54mm_Vertical,BOOMELE,2.54-1*40P,C2337,cut from one 1x40 header strip,"Generic connector, single row, 01x06"
+J7,1,UART,PinHeader_1x03_P2.54mm_Vertical,BOOMELE,2.54-1*40P,C2337,cut from one 1x40 header strip,"Generic connector, single row, 01x03"
+L1,1,47uH,L_Bourns_SRN6045TA,SXN,SMNR6045-470MT,C135307,"alternative to Bourns SRN6045TA-470M, same footprint",Inductor
+R1,1,100R 1W,R_2512_6332Metric_Pad1.40x3.35mm_HandSolder,,,,"not fitted; dummy load for power banks, optional",Resistor
+R2,1,147k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-07147KL,C483012,,Resistor
+R3,1,6k81,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,AC0805FR-076K81L,C228970,,Resistor
+R4,1,100R,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-07100RL,C105577,,Resistor
+"R5, R7",2,100k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-07100KL,C96346,,Resistor
+R6,1,1M,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-071ML,C107700,,Resistor
+R8,1,1M,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,,,,not fitted; option for software bias trim,Resistor
+"R9, R14, R15, R16, R17",5,10k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-0710KL,C84376,,Resistor
+"R10, R11, R12, R13",4,20k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-0720KL,C114566,,Resistor
+"R18, R19, R20, R21",4,1R,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-071RL,C131397,,Resistor
+"R22, R23, R24, R25",4,1k,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,YAGEO,RC1206FR-071KL,C131398,,Resistor
+"R26, R27",2,4k7,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,YAGEO,RC0805FR-074K7L,C60816,,Resistor
+RV1,1,2k,Potentiometer_Bourns_3296W_Vertical,Bourns,3296W-1-202LF,C83684,,"Trimmer potentiometer, pin 2 = wiper"
+U1,1,Pico 2,RaspberryPi_Pico2_Sockets,Kinghelm,KH-2.54FH-1X20P-H8.5,C2905423,two 1x20 sockets (order qty 2); module: Raspberry Pi Pico 2 W,"Raspberry Pi Pico 2 on two 1x20 sockets, top view, USB at the top"
+U2,1,TPS7A2033PDBV,SOT-23-5,Texas Instruments,TLV75533PDBVR,C404027,TLV75533P fitted in place of the TPS7A2033 (unavailable),"Texas Instruments TPS7A20 low-noise 300 mA LDO, fixed output, SOT-23-5"
+U3,1,MAX5026EUT,SOT-23-6,Analog Devices,MAX5026EUT+T,C87603,,"Analog Devices MAX5026, 500 kHz step-up converter, adjustable up to 36 V, SOT-23-6"

@@ -1,0 +1,50 @@
+; Four-channel timer. One state machine per channel, all running this program, started in the same
+; cycle with X = 0xFFFFFFFF.
+;
+; Rule: cycles come in pairs. In the first one ("a") the program looks at the pin or handles the data;
+; the second one ("b") is always and only `jmp x--`. This way X decreases by 1 every 2 cycles exactly on
+; every path, and the four counters stay aligned. Each `jmp x--` is followed (directly or after .wrap) by
+; the same instruction it would jump to, or by the rollover handler: when X goes through zero the jump is not
+; taken and the timing is still correct.
+;
+; Data to the CPU (RX FIFO, joined to 8 words):
+;   X at the rising edge (after one step: fixed delay, the same for all channels);
+;   0xFFFFFFFF when the counter wraps (every 2^32 steps, 57 s at 150 MHz).
+; The time in steps since start is wraps * 2^32 + (0xFFFFFFFF - value).
+
+.program timer
+high2:
+    jmp x-- high            ; b   input still high
+.wrap_target
+high:
+    jmp pin high2           ; a   input high: wait until it goes low
+    jmp x-- idle            ; b   back to low
+public idle:
+    jmp pin rising          ; a   rising edge?
+    jmp x-- idle            ; b   with X = 0 it falls through to the rollover handler
+rollover:
+    mov isr, x              ; a   X = 0xFFFFFFFF
+    jmp x-- rollover2       ; b
+rollover2:
+    push noblock            ; a
+    jmp x-- idle            ; b   X is large here: it never goes through zero
+rising:
+    jmp x-- rising2         ; b
+rising2:
+    mov isr, x              ; a   time of the edge
+    jmp x-- rising3         ; b
+rising3:
+    push noblock            ; a   to the CPU
+    jmp x-- high            ; b   with X = 0, .wrap still leads to "high"
+.wrap
+
+% c-sdk {
+static inline pio_sm_config timer_program_config(uint offset, uint pin) {
+    pio_sm_config c = timer_program_get_default_config(offset);
+    sm_config_set_jmp_pin(&c, pin);
+    sm_config_set_in_pins(&c, pin);
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+    sm_config_set_clkdiv_int_frac(&c, 1, 0);
+    return c;
+}
+%}
